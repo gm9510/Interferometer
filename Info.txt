@@ -1,0 +1,41 @@
+Roadrunner.sh :
+
+1) Runs the GP_mz_GS.C and needs Funciones.h and the initial state (Ground state of the initial trapping potential)
+
+2) Runs the Mean.C which calculates the phase difference 
+
+3) Plots: Probability density, phase and mean phase (space and time phase average ) vs potential depht (deep). It needs 3 gnuplot scripts.
+
+
+
+Runner.sh :
+
+1) Runs the Itime_Msearch_Old.C calculates the ground states at each time step of the trapping potential for a given potential depht. Needs the trapp as input.  
+
+Note: Itime_Msearch.C core dumped!! for any depht (tryial of parallelization)
+
+2) Runs the Fidelity2_Old.C Needs the ground states at each time. The time evolved states and the trapping at each time for a given potential depht. Calculates the fidelity.
+
+Fidelity2.C (tryial of parallelization process)
+
+3) Plots Fidelity_plot.plt for a given potential depht.
+
+
+
+
+Folders to be created:
+1) Data
+Datos/   output from ./Mean
+Datos_5PS/ output form ./GP_mz_GS
+
+2) Figures
+Figuras_Dens/
+Figuras_5PS/
+
+
+Plotting
+ForDens.sh  -> Dens.plt
+ForPhase.sh -> Fase.plt
+In folder Figuras_5PS/
+
+
